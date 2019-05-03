@@ -22,13 +22,7 @@ def nyc_pigeon_organizer(data)
   data.each do |dataCgl, dataCglVal|
     dataCglVal.each do |dataCglKey, dataPig|
       dataPig.each do |value|
-        datalist.each do |listPigKey, listPigValue|
-          listPigValue.each do |listCglKey, listCglValue|
-            if listCglKey.to_s == dataCgl.to_s && listPigKey.to_s == value
-              datalist[listPigKey][listCglKey] << dataCglKey.to_s
-            end
-          end
-        end
+        dataList[value][dataCgl] << dataCglKey.to_s
       end
     end
   end
