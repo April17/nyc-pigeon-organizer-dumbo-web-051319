@@ -10,6 +10,13 @@ def nyc_pigeon_organizer(data)
     end
     dataList[ele][cgl] = []
   end
+  data.each do |cgl, cglVal|
+    cglVal.each do |cglData, pig|
+      pig.each do |ele|
+        dataList[ele][cgl] = []
+      end
+    end
+  end
   binding.pry
   return dataList
 end
