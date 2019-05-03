@@ -10,5 +10,6 @@ def nyc_pigeon_organizer(data)
     end
     dataList[ele][cgl] = []
   end
+  binding.pry
   return dataList
 end
