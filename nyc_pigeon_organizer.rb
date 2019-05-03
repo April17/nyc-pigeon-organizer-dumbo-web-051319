@@ -8,7 +8,6 @@ def nyc_pigeon_organizer(data)
         dataList[ele] = {}
       end
     end
-    dataList[ele][cgl] = []
   end
   data.each do |cgl, cglVal|
     cglVal.each do |cglData, pig|
