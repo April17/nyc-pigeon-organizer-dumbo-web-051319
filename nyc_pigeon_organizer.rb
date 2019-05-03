@@ -22,10 +22,12 @@ def nyc_pigeon_organizer(data)
   dataList.each do |pigKey, pigValue|
     pigValue.each do |listCglKey, listCglValue|
       data.each do |cgl, cglVal|
-        cglVal.each do |cglKey, ary|
-          for i in 0...ary.length
-            if pigKey.to_s == ary[0]
-              dataList[pigKey][listCglKey] << cglKey.to_s
+        if listCglKey.to_s == cgl.to_s
+          cglVal.each do |cglKey, ary|
+            for i in 0...ary.length
+              if pigKey.to_s == ary[0]
+                dataList[pigKey][listCglKey] << cglKey.to_s
+              end
             end
           end
         end
